@@ -23,76 +23,76 @@
 
         .calendar-widget {
             background-color: #88b06d;
-            border-radius: 24px;
-            padding: 32px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            max-width: 600px;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 300px;
             width: 100%;
         }
 
         .calendar-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 10px;
         }
 
         .card {
             background-color: #c8d7b9;
-            border-radius: 20px;
-            padding: 32px;
+            border-radius: 10px;
+            padding: 16px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 200px;
+            min-height: 100px;
         }
 
         .card-label {
             color: #263611;
-            font-size: 12px;
+            font-size: 6px;
             font-weight: 600;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 16px;
+            margin-bottom: 8px;
             opacity: 0.8;
         }
 
         .card-value {
             color: #263611;
-            font-size: 72px;
+            font-size: 36px;
             font-weight: 700;
             line-height: 1;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
             font-variant-numeric: tabular-nums;
         }
 
         .card-subtext {
             color: #263611;
-            font-size: 11px;
+            font-size: 5.5px;
             font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
             opacity: 0.7;
         }
 
         @media (max-width: 480px) {
             .calendar-widget {
-                padding: 24px;
+                padding: 12px;
             }
 
             .card {
-                min-height: 160px;
-                padding: 24px;
+                min-height: 80px;
+                padding: 12px;
             }
 
             .card-value {
-                font-size: 52px;
+                font-size: 26px;
             }
 
             .calendar-container {
-                gap: 16px;
+                gap: 8px;
             }
         }
 
@@ -100,8 +100,8 @@
         .update-time {
             text-align: center;
             color: #88b06d;
-            font-size: 2px;
-            margin-top: 24px;
+            font-size: 1px;
+            margin-top: 12px;
             opacity: 0.6;
         }
     </style>
