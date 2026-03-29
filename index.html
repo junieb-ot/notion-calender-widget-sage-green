@@ -10,32 +10,30 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #88b06d 0%, #c8d7b9 100%);
+            background: transparent;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
         }
-
         .calendar-widget {
-            background-color: #88b06d;
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 12px;
             padding: 16px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             max-width: 300px;
             width: 100%;
         }
-
         .calendar-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
         }
-
         .card {
             background-color: #c8d7b9;
             border-radius: 10px;
@@ -48,7 +46,6 @@
             justify-content: center;
             min-height: 100px;
         }
-
         .card-label {
             color: #263611;
             font-size: 6px;
@@ -58,7 +55,6 @@
             margin-bottom: 8px;
             opacity: 0.8;
         }
-
         .card-value {
             color: #263611;
             font-size: 36px;
@@ -67,7 +63,6 @@
             margin-bottom: 6px;
             font-variant-numeric: tabular-nums;
         }
-
         .card-subtext {
             color: #263611;
             font-size: 5.5px;
@@ -76,30 +71,24 @@
             text-transform: uppercase;
             opacity: 0.7;
         }
-
         @media (max-width: 480px) {
             .calendar-widget {
                 padding: 12px;
             }
-
             .card {
                 min-height: 80px;
                 padding: 12px;
             }
-
             .card-value {
                 font-size: 26px;
             }
-
             .calendar-container {
                 gap: 8px;
             }
         }
-
-        /* Auto-update functionality */
         .update-time {
             text-align: center;
-            color: #88b06d;
+            color: transparent;
             font-size: 1px;
             margin-top: 12px;
             opacity: 0.6;
@@ -121,7 +110,6 @@
         </div>
         <div class="update-time">Updated today</div>
     </div>
-
     <script>
         function updateCalendar() {
             const now = new Date();
@@ -139,10 +127,8 @@
             const dayName = dayNames[now.getDay()];
             document.getElementById('dayname').textContent = dayName;
         }
-
         // Update on load
         updateCalendar();
-
         // Update every minute
         setInterval(updateCalendar, 60000);
     </script>
